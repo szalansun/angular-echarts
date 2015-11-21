@@ -99,6 +99,7 @@ function getLinkFunction($http, theme, util, type) {
             if (!chart) {
                 chart = echarts.init(ndWrapper, theme.get(scope.config.theme || 'macarons'));
             }
+            chart.setTheme(theme.get(scope.config.theme || 'macarons'));
             if (scope.config.event) {
                 if (!Array.isArray(scope.config.event)) {
                     scope.config.event = [scope.config.event];
